@@ -1,21 +1,16 @@
-import React from 'react'
-import {Navbar,Carousel} from './components'
+import React, { useState, useEffect } from "react";
+import "./carousel.css";
+import Carousel from 'react-bootstrap/Carousel';
 
-const App = () => {
 
+
+function IndividualIntervalsExample() {
   return (
-    <div className="App">
-      <div className="gradient__bg">
-        <Navbar />
-        
-      </div>
-      <div>
-      
-      <Carousel>
+    <Carousel>
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="http://www.shengshiyimin.com/public/static/module/shengshi/images/about0501.png"
+          src="holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -26,7 +21,7 @@ const App = () => {
       <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
-          src="http://www.shengshiyimin.com/public/static/module/shengshi/images/about0501.png"
+          src="holder.js/800x400?text=Second slide&bg=282c34"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -37,7 +32,7 @@ const App = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="http://www.shengshiyimin.com/public/static/module/shengshi/images/about0501.png"
+          src="holder.js/800x400?text=Third slide&bg=20232a"
           alt="Third slide"
         />
         <Carousel.Caption>
@@ -48,14 +43,9 @@ const App = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-   
-
-    </div>
-    </div>
-    
-  )
+  );
 }
 
 
 
-export default App
+export default Carousel;
